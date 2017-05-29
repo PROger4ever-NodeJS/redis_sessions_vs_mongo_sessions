@@ -61,7 +61,7 @@ function getLotOfRecordsByPrefixRedis(client, mainCB) {
   });
 }
 
-let regexPrefix = new RegExp(`bench:${benchUnique}:`);
+let regexPrefix = new RegExp(`^bench:${benchUnique}:`);
 function getLotOfRecordsByPrefixMongo(collection, mainCB) {
   collection.find({
     _id: regexPrefix
